@@ -1,1 +1,2 @@
-alert('Webpack is Awesome!');
+var string = require('./string');
+alert(string);
