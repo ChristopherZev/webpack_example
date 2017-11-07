@@ -66,11 +66,13 @@
 /******/ ({
 
 /***/ 2:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 //alert to test about bundle
 alert('My about me bundle works!');
-
 
 /***/ })
 
