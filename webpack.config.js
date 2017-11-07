@@ -4,6 +4,9 @@
 // i.e. app, about, etc to automatically create a bundle of that name
 var path = require('path');
 module.exports = {
+//context helps avoid writing out src for every path
+//if we specify source in context then the entry paths only need to
+//include their specific via bundles
   context: path.join(__dirname, 'src'),
   entry: {
     //creates specific path(entry point) for the app bundle

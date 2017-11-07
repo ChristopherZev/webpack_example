@@ -67,6 +67,8 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
+//Tests the link of the string,js file to app.js which
+//tests the app.bundle.js 
 var string = __webpack_require__(1);
 alert(string);
 
@@ -75,7 +77,9 @@ alert(string);
 /* 1 */
 /***/ (function(module, exports) {
 
-var string = "This is a string check 1..2..3..!"
+//Example of setting a seperate js file to be module.exported to
+// app.js via require('')
+var string = "This is a new string check 1..2..3..!"
 module.exports = string;
 
 
