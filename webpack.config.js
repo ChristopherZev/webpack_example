@@ -37,5 +37,13 @@ module.exports = {
         //exclude:
       }
     ]
+  },
+  //Open webpack devServer to index.html instead of root directory
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    //Prevent a webpack status bar from displaying, the iframe
+    inline: true,
+    //prints out errors-only when bundling via web devServer
+    stats: 'errors-only'
   }
 };
