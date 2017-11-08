@@ -60,11 +60,27 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _string = __webpack_require__(1);
+
+var _string2 = _interopRequireDefault(_string);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+alert(_string2.default); //Tests the link of the string,js file to app.js which
+//tests the app.bundle.js, you can use require('') or babel(import/export)
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -77,22 +93,6 @@ Object.defineProperty(exports, "__esModule", {
 // app.js via require('') or babel(export/import)
 var string = "Babel String Test";
 exports.default = string;
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _string = __webpack_require__(0);
-
-var _string2 = _interopRequireDefault(_string);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-alert(_string2.default); //Tests the link of the string,js file to app.js which
-//tests the app.bundle.js, you can use require('') or babel(import/export)
 
 /***/ })
 /******/ ]);
