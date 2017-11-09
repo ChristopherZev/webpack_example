@@ -3,6 +3,8 @@
 //[name]. is from webpack that allows you to use the key from a bundle
 // i.e. app, about, etc to automatically create a bundle of that name
 var path = require('path');
+//requires webpack plugin for use in Plugins module
+var htmlPluginWebpack = require('html-webpack-plugin');
 module.exports = {
 //context helps avoid writing out src for every path
 //if we specify source in context then the entry paths only need to
@@ -45,5 +47,25 @@ module.exports = {
     inline: true,
     //prints out errors-only when bundling via web devServer
     stats: 'errors-only'
-  }
+  },
+  plugins: [
+    new htmlPluginWebpack({
+      //injects scripts into body by default, could change to other location
+      template: path.join(__dirname, 'src','index.html'),
+      // hash files to the file name to automatically inject them
+      hash: true,
+      //chunks selects which bundle to use for this index or other specified
+      //html files
+      chunks:['app'] // injects app bundle script to index
+    }),
+    new htmlPluginWebpack({
+      //injects scripts into body by default, could change to other location
+      template: path.join(__dirname, 'src','index.html'),
+      // hash files to the file name to automatically inject them
+      hash: true,
+      filename: 'about.html',//about.html is a new filename for about bundle
+      chunks: ['about']// injects about bundle script to index
+    })
+
+  ]
 };
